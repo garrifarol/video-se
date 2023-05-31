@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="./assets/pawxy.ico"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="./src/style.css" />
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <title>Simple Video Search Engine</title>
+    </head>
+    <body>
+        <header>
+            <section id="trademark">
+                <img
+                    src="./assets/pawxy.png"
+                    alt="pawxy logo"
+                    width="20"
+                    height="20"
+                />
+                <h3>Simple Video Search Engine</h3>
+            </section>
+        </header>
+
+        <main>
+            <section id="searchBar">
+                <form id="searchForm">
+                    <input id="search" type="text" placeholder="Search..." />
+                    <button type="submit" onsubmit="">
+                        <i class="bx bx-search"></i>
+                    </button>
+                </form>
+            </section>
+            <section id="results">
+                <ul id="resultList"></ul>
+            </section>
+            <nav id="nav">
+                <button type="button" id="prev">
+                    <i class="bx bx-left-arrow-alt"></i> Prev
+                </button>
+                <span id="page"></span>
+                <button type="button" id="next">
+                    Next <i class="bx bx-right-arrow-alt"></i>
+                </button>
+            </nav>
+        </main>
+        <div id="preview">
+            <div class="preview-content">
+                <div class="iframe-container">
+                    <iframe
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+            <div class="actions">
+                <a id="visit" target="_blank"><button>Visit</button></a>
+                <button id="closePreview">Close</button>
+            </div>
+        </div>
+        <script src="./src/main.js"></script>
+    </body>
+</html>
